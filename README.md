@@ -11,10 +11,10 @@ such as redundancies or inefficiencies, I'd love if you could let me know of a b
 *whew*\
 \
 Now on to the actual documentation...\
-\
-#CPU Opcodes
-\
-0 00 Perform the Operation specified by the argument on the top element of the stack.
-1 01 Pop the top value off the stack and put it at the argument address in memory.
-2 10 Push the value at the argument address onto the stack.
-3 11 Jump to the line specified by the argument in program memory.
+\ 
+# CPU Opcodes
+\ 
+0 00 Perform the Operation specified by the argument on the top element of the stack.\
+1 01 Pop the top value off the stack and put it at the argument address in memory.\
+2 10 Push the value at the argument address onto the stack.\
+3 11 Jump to the line specified by the argument in program memory.\

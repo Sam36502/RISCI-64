@@ -66,30 +66,30 @@ however, is seperate from RAM. This variable exists so that you can push an addr
 onto the stack and "go" there in memory. E.g.:\
 `pushfrom 0x03` -> Pushes value of 3 onto stack.\
 `pushfrom 0x1A` -> Pushes value of the address on top of the stack, onto the stack. (Does this even make sense?)
-\
+
 **Standard Input**
 This is where the system will try to read input from. If a user
 enters something through the I/O system it will be written here.
 Only 1 Byte at a time though.
-\
+
 **Standard Output**
 This is where the user should push their characters to be output.
 Note that this will be read by I/O as an ASCII character when output.
-\
+
 **Standard Error**
 This is where the system will write Runtime Errors and where the User
 can push their own error Messages.
-\
+
 **Remote Command**
 This byte allows any external process to write commands to the CPU.
 If you want to use the RISCI with a "shell" instead of by writing
 programs, this is the byte to use.
-\
+
 **Sound Output**
 This byte was mainly just an idea, I thought might be cool.
 The top 3 bits determine the "Instrument" and the left-over
 5 bits determines the pitch. (This is still in the concept phase, There's no defined list of instruments or Pitches yet)
-\
+
 **8x8 Screen Output**
 These 32 bytes are each split in half to make 64 nibbles.
 Each nibble corresponds to a pixel in an 8x8 grid. The first nibble (0x20) is the top left

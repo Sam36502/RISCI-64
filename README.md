@@ -59,12 +59,12 @@ These are pretty self explanatory, they're for storage of values.
 It's important to note that RAM states can be stored in small .mem
 files. You can use these memory files to start the program with some variables
 already initialized. This is helpful for ASCII strings and such.
-\
+
 **Top of Stack Value**
 This is where the system stores the Stack's top value. The stack itself
-however, is seperate from RAM. This variable is so that you can push an address itself
-onto the stack and "go" there in memory. E.g.:
-`pushfrom 0x03` -> Pushes value of 3 onto stack.
+however, is seperate from RAM. This variable exists so that you can push an address itself
+onto the stack and "go" there in memory. E.g.:\
+`pushfrom 0x03` -> Pushes value of 3 onto stack.\
 `pushfrom 0x1A` -> Pushes value of the address on top of the stack, onto the stack. (Does this even make sense?)
 \
 **Standard Input**

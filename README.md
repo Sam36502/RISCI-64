@@ -10,7 +10,7 @@ such as redundancies or inefficiencies, I'd love if you could let me know of a b
 \
 *whew*\
 \
-Now on to the actual documentation...\
+Now on to the actual documentation...
 
 # CPU Opcodes
 

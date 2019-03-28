@@ -12,26 +12,30 @@ such as redundancies or inefficiencies, I'd love if you could let me know of a b
 \
 Now on to the actual documentation...
 
-# CPU Opcodes
+# How to use the VM
+Just download the .jar in the 
 
-0 00 Perform the Operation specified by the argument on the top element of the stack.\
-1 01 Pop the top value off the stack and put it at the argument address in memory.\
-2 10 Push the value at the argument address onto the stack.\
-3 11 Jump to the line specified by the argument in program memory.
-\
+# CPU Opcodes
+Num | Bitcode | Action
+--- | --- | ---
+0 | 00 | Perform the Operation specified by the argument on the top element of the stack.
+1 | 01 | Pop the top value off the stack and put it at the argument address in memory.
+2 | 10 | Push the value at the argument address onto the stack.
+3 | 11 | Jump to the line specified by the argument in program memory.
+
 Every command that's passed to the CPU is 1 Byte.
 2 Bits for the instruction and a 6-Bit Argument.
 Here's an example:
-\
+
 `10000011` -> pushfrom 3 -> Take the value of memory address 3 (0x03) and push it onto the stack
-\
+
 Because of the 6-Bit argument, The RISCI-64 can only access 64 bytes of RAM.
 
 # RAM
 
 Ram is split up into a block of general variables, many system variables such as stdout, and an 8x8 grid's worth of nibbles.
 If you want to output an image, you can write the 4-Bit Pixel data into the top of RAM and update the screen.
-\
+
 These are all the addresses (each 0 in the block represents a byte of data):
 
 ```
@@ -94,7 +98,7 @@ The top 3 bits determine the "Instrument" and the left-over
 These 32 bytes are each split in half to make 64 nibbles.
 Each nibble corresponds to a pixel in an 8x8 grid. The first nibble (0x20) is the top left
 of the screen and all other pixels follow. Left to right, top to bottom.
-The 16 possible colors correspomd to the Microsoft Windows default 16-color palette:
+The 16 possible colors correspond to the Microsoft Windows default 16-color palette:
 ```
 0000 00 Black
 0001 01 Maroon

@@ -2,9 +2,9 @@
 *A 2-Bit Virtual Machine*\
 \
 This is just a little Project I made to mess about with Theoretical CPU architecture.\
-**DISCLAIMER:** I only know the basics of System Architecture design!
+**Disclaimer:** I only know the basics of System Architecture design!
 There is probably a much better way to make a 2-Bit VM.\
-**DISCLAIMER 2:** This is all hobby code. Comments are few and probably worded strangely, and
+**Disclaimer 2:** This is all hobby code. Comments are few and probably worded strangely, and
 I wrote a lot of this code in seperate, unplanned stages. If you notice any odd bits of code,\
 such as redundancies or inefficiencies, I'd love if you could let me know of a better solution. Thanks.\
 \
@@ -13,7 +13,12 @@ such as redundancies or inefficiencies, I'd love if you could let me know of a b
 Now on to the actual documentation...
 
 # How to use the VM
-Just download the .jar in the 
+Run the .jar from this repository.
+You will probably want to also get the Compiler [here](https://github.com/Sam36502/RISCompile)
+
+With the compiler you can make '.ass' (Assembly) files that can be run from this VM.
+However, you do not need the Compiler as the VM can also be used via a shell.
+The shell uses mostly the same keywords as the .RIS files, plus some extras for debugging.
 
 # CPU Opcodes
 Num | Bitcode | Action
@@ -48,8 +53,8 @@ These are all the addresses (each 0 in the block represents a byte of data):
 0x1B    0     [Standard Input]
 0x1C     0    [Standard Output]
 0x1D      0   [Standard Error]
-0x1E       0  [Remote Command]
-0x1F        0 [Sound Output]
+0x1E       0  [I dunno (general variable)]
+0x1F        0 [I dunno (general variable)]
 
 0x20 00000000 [8x8 Screen Output]
 0x28 00000000
@@ -83,37 +88,3 @@ Note that this will be read by I/O as an ASCII character when output.
 **Standard Error**
 This is where the system will write Runtime Errors and where the User
 can push their own error Messages.
-
-**Remote Command**
-This byte allows any external process to write commands to the CPU.
-If you want to use the RISCI with a "shell" instead of by writing
-programs, this is the byte to use.
-
-**Sound Output**
-This byte was mainly just an idea, I thought might be cool.
-The top 3 bits determine the "Instrument" and the left-over
-5 bits determines the pitch. (This is still in the concept phase, There's no defined list of instruments or Pitches yet)
-
-**8x8 Screen Output**
-These 32 bytes are each split in half to make 64 nibbles.
-Each nibble corresponds to a pixel in an 8x8 grid. The first nibble (0x20) is the top left
-of the screen and all other pixels follow. Left to right, top to bottom.
-The 16 possible colors correspond to the Microsoft Windows default 16-color palette:
-```
-0000 00 Black
-0001 01 Maroon
-0010 02 Green
-0011 03 Olive
-0100 04 Navy
-0101 05 Purple
-0110 06 Teal
-0111 07 Silver
-1000 08 Gray
-1001 09 Red
-1010 10 Lime
-1011 11 Yellow
-1100 12 Blue
-1101 13 Fuchsia
-1110 14 Aqua
-1111 15 White
-```

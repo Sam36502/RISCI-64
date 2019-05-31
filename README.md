@@ -1,15 +1,11 @@
 # RISCI-64
 *A 2-Bit Virtual Machine*\
-\
+
 This is just a little Project I made to mess about with Theoretical CPU architecture.\
-**Disclaimer:** I only know the basics of System Architecture design!
-There is probably a much better way to make a 2-Bit VM.\
-**Disclaimer 2:** This is all hobby code. Comments are few and probably worded strangely, and
-I wrote a lot of this code in seperate, unplanned stages. If you notice any odd bits of code,\
-such as redundancies or inefficiencies, I'd love if you could let me know of a better solution. Thanks.\
-\
-*whew*\
-\
+**Disclaimer:** Read my code at your own risk. it's is\
+predominantly unorganized Hobby code. If you find any\
+possible imporovements, feel free to let me know.
+
 Now on to the actual documentation...
 
 # How to use the VM
@@ -20,10 +16,17 @@ With the compiler you can make '.ass' (Assembly) files that can be run from this
 However, you do not need the Compiler as the VM can also be used via a shell.
 The shell uses mostly the same keywords as the .RIS files, plus some extras for debugging.
 
+# The Name
+Please note, this has no affiliation with RISC OS. The name mainly comes
+from the concept of a Reduced Instruction Set Computer, which I thought fit
+the description of a 2-bit computer. The 'I' on the end of the name has no
+Fixed meaning. I just thought it gave it a more unique and better-sounding
+name. And of the course the 64 is reference to the 64 Bytes of available RAM / Program memory.
+
 # CPU Opcodes
 Num | Bitcode | Action
 --- | --- | ---
-0 | 00 | Perform the Operation specified by the argument on the top element of the stack.
+0 | 00 | Perform the Operation specified by the argument on the top element(s) of the stack.
 1 | 01 | Pop the top value off the stack and put it at the argument address in memory.
 2 | 10 | Push the value at the argument address onto the stack.
 3 | 11 | Jump to the line specified by the argument in program memory.
@@ -88,3 +91,13 @@ Note that this will be read by I/O as an ASCII character when output.
 **Standard Error**
 This is where the system will write Runtime Errors and where the User
 can push their own error Messages.
+
+**8x8 Screen Output**
+This represents an 8x8 grid of 16-colour pixels based on the Apple Macintosh default 16-color palette.
+to set a specific pixel to a colour, you can look up the colour in the palette below and get the 4-bit binary.
+After that you will have to figure out how it will fit in the grid. Every byte in the addresses from 0x20 to 0x38 represents
+2 pixels in the 8x8 grid. so say you wanted to set the top left pixel to red (3 -> 0011).
+you would then set byte 0x20 to `0011 0000`.
+
+to set the pixel below and to the right of the first one to blue (6 -> 0110) you would set byte 0x24 to `0000 0110`
+

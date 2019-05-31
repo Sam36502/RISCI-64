@@ -103,7 +103,7 @@ to set the pixel below and to the right of the first one to blue (6 -> 0110) you
 
 Colour | Name | Hex RGB | Num | 4-Bit Binary
 --- | --- | ---
-![#ffffff](https://placehold.it/15/f03c15/000000?text=+) | White | ffffff | 0 | 0000
+![#ffffff](https://placehold.it/15/ffffff/000000?text=+) | White | ffffff | 0 | 0000
 ![#ffff00](https://placehold.it/15/f03c15/000000?text=+) | Yellow | ffff00 | 1 | 0001
 Orange | ff6600 | 2 | 0010
 Red | dd0000 | 3 | 0011

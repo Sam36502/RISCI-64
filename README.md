@@ -101,21 +101,21 @@ you would then set byte 0x20 to `0011 0000`.
 
 to set the pixel below and to the right of the first one to blue (6 -> 0110) you would set byte 0x24 to `0000 0110`
 
-Colour | Num | 4-Bit Binary
+Colour | Name | Hex RGB | Num | 4-Bit Binary
 --- | --- | ---
-White | 0 | 0000
-Yellow | 1 | 0001
-Orange | 2 | 0010
-Red | 3 | 0011
-Magenta | 4 | 0100
-Purple | 5 | 0101
-Blue | 6 | 0110
-Cyan | 7 | 0111
-Green | 8 | 1000
-Dark Green | 9 | 1001
-Brown | 10 | 1010
-Tan | 11 | 1011
-Light Grey | 12 | 1100
-Medium Grey | 13 | 1101
-Dark Grey | 14 | 1110
-Black | 15 | 1111
+![#ffffff](https://placehold.it/15/f03c15/000000?text=+) | White | ffffff | 0 | 0000
+![#ffff00](https://placehold.it/15/f03c15/000000?text=+) | Yellow | ffff00 | 1 | 0001
+Orange | ff6600 | 2 | 0010
+Red | dd0000 | 3 | 0011
+Magenta | ff0099 | 4 | 0100
+Purple | 330099 | 5 | 0101
+Blue | 0000cc | 6 | 0110
+Cyan | 0099ff | 7 | 0111
+Green | 00aa00 | 8 | 1000
+Dark Green | 006600 | 9 | 1001
+Brown | 663300 | 10 | 1010
+Tan | 996633 | 11 | 1011
+Light Grey | bbbbbb | 12 | 1100
+Medium Grey | 888888 | 13 | 1101
+Dark Grey | 444444 | 14 | 1110
+Black | 000000 | 15 | 1111

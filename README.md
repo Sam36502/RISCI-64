@@ -20,7 +20,7 @@ The shell uses mostly the same keywords as the .RIS files, plus some extras for 
 Please note, this has no affiliation with RISC OS. The name mainly comes
 from the concept of a Reduced Instruction Set Computer, which I thought fit
 the description of a 2-bit computer. The 'I' on the end of the name has no
-Fixed meaning. I just thought it gave it a more unique and better-sounding
+fixed meaning. I just thought it gave it a more unique and better-sounding
 name. And of the course the 64 is reference to the 64 Bytes of available RAM / Program memory.
 
 # CPU Opcodes

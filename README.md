@@ -104,18 +104,18 @@ to set the pixel below and to the right of the first one to blue (6 -> 0110) you
 Colour | Name | Hex RGB | Num | 4-Bit Binary
 --- | --- | ---
 ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) | White | ffffff | 0 | 0000
-![#ffff00](https://placehold.it/15/f03c15/000000?text=+) | Yellow | ffff00 | 1 | 0001
-Orange | ff6600 | 2 | 0010
-Red | dd0000 | 3 | 0011
-Magenta | ff0099 | 4 | 0100
-Purple | 330099 | 5 | 0101
-Blue | 0000cc | 6 | 0110
-Cyan | 0099ff | 7 | 0111
-Green | 00aa00 | 8 | 1000
-Dark Green | 006600 | 9 | 1001
-Brown | 663300 | 10 | 1010
-Tan | 996633 | 11 | 1011
-Light Grey | bbbbbb | 12 | 1100
-Medium Grey | 888888 | 13 | 1101
-Dark Grey | 444444 | 14 | 1110
-Black | 000000 | 15 | 1111
+![#ffff00](https://placehold.it/15/ffff00/000000?text=+) | Yellow | ffff00 | 1 | 0001
+![#ff6600](https://placehold.it/15/ff6600/000000?text=+) | Orange | ff6600 | 2 | 0010
+![#dd0000](https://placehold.it/15/dd0000/000000?text=+) | Red | dd0000 | 3 | 0011
+![#ff0099](https://placehold.it/15/ff0099/000000?text=+) | Magenta | ff0099 | 4 | 0100
+![#330099](https://placehold.it/15/330099/000000?text=+) | Purple | 330099 | 5 | 0101
+![#0000cc](https://placehold.it/15/0000cc/000000?text=+) | Blue | 0000cc | 6 | 0110
+![#0099ff](https://placehold.it/15/0099ff/000000?text=+) | Cyan | 0099ff | 7 | 0111
+![#00aa00](https://placehold.it/15/00aa00/000000?text=+) | Green | 00aa00 | 8 | 1000
+![#006600](https://placehold.it/15/006600/000000?text=+) | Dark Green | 006600 | 9 | 1001
+![#663300](https://placehold.it/15/663300/000000?text=+) | Brown | 663300 | 10 | 1010
+![#996633](https://placehold.it/15/996633/000000?text=+) | Tan | 996633 | 11 | 1011
+![#bbbbbb](https://placehold.it/15/bbbbbb/000000?text=+) | Light Grey | bbbbbb | 12 | 1100
+![#888888](https://placehold.it/15/888888/000000?text=+) | Medium Grey | 888888 | 13 | 1101
+![#444444](https://placehold.it/15/444444/000000?text=+) | Dark Grey | 444444 | 14 | 1110
+![#000000](https://placehold.it/15/000000/000000?text=+) | Black | 000000 | 15 | 1111

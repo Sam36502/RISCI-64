@@ -1,0 +1,33 @@
+//Test program to read char from input and if it is an exclamation point
+//output 'bang'
+
+//ASCII for exclamation point and "Bang"
+{33,
+66, 97, 110, 103}
+
+pushfrom stdin
+pushfrom 0
+jumpif 7
+
+pushfrom 0
+pushfrom 0
+jumpif 63
+
+//Output 'Bang!'
+perform nothing
+perform nothing
+pushfrom 0
+pushfrom 4
+pushfrom 3
+pushfrom 2
+pushfrom 1
+popto stdout
+popto stdout
+popto stdout
+popto stdout
+popto stdout
+
+//Skip to the end of the program
+pushfrom 0
+pushfrom 0
+jumpif 63

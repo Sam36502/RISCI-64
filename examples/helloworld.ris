@@ -1,0 +1,19 @@
+//Hello World
+
+//Pre-Loading ASCII Values into RAM (0 is index, 13 is string length)
+{72, 101, 108, 108, 111, 44, 32,
+119, 111, 114, 108, 100, 33,
+0, 13}
+
+//Pushing ASCII into Output
+pushfrom 13
+pushfrom 14
+jumpif 63
+pushfrom 13
+pushfrom top
+popto stdout
+perform increment
+popto 13
+pushfrom 14
+pushfrom 14
+jumpif 0

@@ -101,3 +101,21 @@ you would then set byte 0x20 to `0011 0000`.
 
 to set the pixel below and to the right of the first one to blue (6 -> 0110) you would set byte 0x24 to `0000 0110`
 
+Colour | Num | 4-Bit Binary
+--- | --- | ---
+White | 0 | 0000
+Yellow | 1 | 0001
+Orange | 2 | 0010
+Red | 3 | 0011
+Magenta | 4 | 0100
+Purple | 5 | 0101
+Blue | 6 | 0110
+Cyan | 7 | 0111
+Green | 8 | 1000
+Dark Green | 9 | 1001
+Brown | 10 | 1010
+Tan | 11 | 1011
+Light Grey | 12 | 1100
+Medium Grey | 13 | 1101
+Dark Grey | 14 | 1110
+Black | 15 | 1111

@@ -102,7 +102,7 @@ you would then set byte 0x20 to `0011 0000`.
 to set the pixel below and to the right of the first one to blue (6 -> 0110) you would set byte 0x24 to `0000 0110`
 
 Colour | Name | Hex RGB | Num | 4-Bit Binary
---- | --- | ---
+--- | --- | --- | --- | ---
 ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) | White | ffffff | 0 | 0000
 ![#ffff00](https://placehold.it/15/ffff00/000000?text=+) | Yellow | ffff00 | 1 | 0001
 ![#ff6600](https://placehold.it/15/ff6600/000000?text=+) | Orange | ff6600 | 2 | 0010

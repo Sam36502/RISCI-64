@@ -1,0 +1,22 @@
+//Program outputs all colors on the right pixels of a pair
+
+//Colour index, Start of VRAM
+{0, 15, 32}
+
+pushfrom 0
+pushfrom 1
+jumpif 63
+
+pushfrom 2
+pushfrom 0
+perform addition
+pushfrom 0
+popto top
+
+pushfrom 0
+perform increment
+popto 0
+
+pushfrom 0
+pushfrom 0
+jumpif 0

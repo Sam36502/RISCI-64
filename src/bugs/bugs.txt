@@ -1,0 +1,9 @@
+RISCI-64
+1.7.1 - Bugs
+-----------------------
+
+*****	Programs can only be run once in the console.
+***	When there are only two elements on the stack, the perform command only reads the first element.
+*	Not a bug but the default clockspeed needs to be waay faster.
+*	Not a bug but, there should be a newline after a program is run from console.
+**	If no input is passed to a program expecting input, java throws exceptions.

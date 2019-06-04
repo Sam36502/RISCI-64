@@ -3,6 +3,8 @@ package virtualMachine;
 import java.util.Scanner;
 import java.util.Stack;
 
+import javax.swing.JFrame;
+
 public class Shell {
 	
 	public static Scanner input = new Scanner(System.in);
@@ -55,6 +57,7 @@ public class Shell {
 						System.out.println("  print                 - Outputs the content of stdOutput.");
 						System.out.println("  flushin               - Flushes standard input.");
 						System.out.println("  flushout              - Flushes standard output.");
+						System.out.println("  screen                - Displays the screen and updates it.");
 						System.out.println("All RISCI CPU commands:\n--------------------------------");
 						System.out.println("  pushfrom <addr>       - Pushes a value from RAM onto the Stack");
 						System.out.println("  popto <addr>          - Pops top value off the Stack and moves the to RAM");
@@ -99,6 +102,17 @@ public class Shell {
 										+ "-------------------------\n"
 										+ " Takes all characters sent to stdout (RAM 28) and prints them out.\n"
 										+ " E.g. insert 72 stdout -> print -> 'H' is printed in console");
+								break;
+							case "screen":
+								System.out.println("Screen:\n"
+										+ "-------------------------\n"
+										+ " If screen has not yet been called, it will open a new window.\n"
+										+ " with the screen of the RISCI-64 displayed on it. The screen's\n"
+										+ " output is based on the memory from 32-64 (see documentation).\n"
+										+ " If the window is already open, then 'screen' will simply \n"
+										+ " refresh the window, displaying any changes that have occured."
+										+ " E.g. insert 6 35 -> screen -> Blue pixel is displayed in the\n"
+										+ " top right corner of the screen.");
 								break;
 							default:
 								System.out.println("There is no help page for that.");
@@ -257,6 +271,7 @@ public class Shell {
 				case "screen":
 					if (!InputOutput.screenStarted) {
 						Screen.init();
+						InputOutput.screenStarted = true;
 					}
 					Screen.update();
 					break;

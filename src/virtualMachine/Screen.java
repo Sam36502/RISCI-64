@@ -7,10 +7,11 @@ import javax.swing.JFrame;
 
 public class Screen extends Canvas {
 	private static JFrame frame;
+	private static Canvas canvas;
 
 	public static void init() {
 		frame = new JFrame("RISCI-64 Screen");
-		Canvas canvas = new Screen();
+		canvas = new Screen();
 		canvas.setSize(800, 800);
 		frame.add(canvas);
 		frame.pack();
@@ -18,7 +19,7 @@ public class Screen extends Canvas {
 	}
 
 	public static void update() {
-		frame.repaint();
+		canvas.repaint();
 	}
 
 	public void paint(Graphics g) {

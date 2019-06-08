@@ -1,0 +1,19 @@
+//Test RAM
+
+{63}
+pushfrom 1
+
+pushfrom 1
+pushfrom 0
+jumpif 63
+
+pushfrom 1
+pushfrom 1
+popto top
+pushfrom 1
+perform increment
+popto 1
+
+pushfrom 0
+pushfrom 0
+jumpif 0

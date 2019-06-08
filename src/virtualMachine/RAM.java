@@ -5,6 +5,7 @@ import java.io.*;
 public class RAM {
 	
 	byte[] mem = new byte[64];
+	public boolean screenWritten = false;
 	
 	public RAM() {
 		for (int i=0; i<64; i++) {
@@ -13,11 +14,17 @@ public class RAM {
 	}
 	
 	public byte get(int addr) {
+		if (addr < 0 || addr > 63) {
+			return -1;
+		}
 		return mem[addr];
 	}
 	
 	public void set(int addr, byte value) {
 		mem[addr] = value;
+		if (addr >= 32) {
+			screenWritten = true;
+		}
 	}
 	
 	//Prints RAM out as Chars

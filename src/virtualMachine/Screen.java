@@ -14,6 +14,7 @@ public class Screen extends Canvas {
 		canvas = new Screen();
 		canvas.setSize(800, 800);
 		frame.add(canvas);
+		frame.addWindowListener(new ScreenListener());
 		frame.pack();
 		frame.setVisible(true);
 	}

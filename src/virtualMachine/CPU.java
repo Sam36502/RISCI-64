@@ -94,6 +94,16 @@ public class CPU {
 				if (stack.pop() == stack.pop()) {
 					prog.jump(argument);
 				}
+				break;
+		}
+		
+		//Draws the screen if it's been written to
+		if (mem.screenWritten) {
+			if (!InputOutput.screenStarted) {
+				Screen.init();
+				InputOutput.screenStarted = true;
+			}
+			Screen.update();
 		}
 		
 		//copy top of stack to top address

@@ -197,6 +197,7 @@ public class InputOutput {
 				case 4:
 					isRunning = false;
 					System.out.println("\nBye!");
+					System.exit(0);
 					break;
 				default:
 					System.out.println("Invalid option.");

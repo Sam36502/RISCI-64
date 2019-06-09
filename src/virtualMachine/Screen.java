@@ -31,8 +31,11 @@ public class Screen extends Canvas {
 
 		// Serialize the V-RAM into a string
 		String buffer = "";
+		//System.out.println("Serializing V-RAM...");
 		for (int i=32; i<64; i++) {
-			buffer += Integer.toBinaryString(InputOutput.ram.get(i)+256).substring(1);
+			String buf = Integer.toBinaryString(InputOutput.ram.get(i)+256).substring(1);
+			//System.out.println("0x"+Integer.toHexString(i)+" - "+buf);
+			buffer += buf;
 		}
 
 		// Display the buffer

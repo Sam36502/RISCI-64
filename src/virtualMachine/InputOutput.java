@@ -11,7 +11,7 @@ public class InputOutput {
 	public static final String VERSION = "1.7.2";
 	
 	//User Settings
-	public static int clockspeed = 250;
+	public static int clockspeed = 10;
 	public static boolean showProg = false; 
 	public static String prompt = " > ";
 	
@@ -186,6 +186,7 @@ public class InputOutput {
 							e.printStackTrace();
 						}
 					}
+					System.out.println("");
 					
 					break;
 				case 2:

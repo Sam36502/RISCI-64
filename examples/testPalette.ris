@@ -1,0 +1,23 @@
+//test program to draw the 16-colour palette to the screen
+
+//Fill palette information into ram
+{1, 35, 69, 103, 137, 171, 205, 239,
+ 0, 32}
+
+pushfrom 8
+pushfrom 9
+jumpif 63
+
+pushfrom 8
+pushfrom top
+pushfrom 9
+perform addition
+popto top
+
+pushfrom 8
+perform increment
+popto 8
+
+pushfrom 0
+pushfrom 0
+jumpif 0

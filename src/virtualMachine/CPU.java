@@ -58,14 +58,14 @@ public class CPU {
 			argument = Integer.parseInt(binString.substring(2, 8) ,2);
 		} else if (binString.length() == 7) {
 			command = 1;
-			argument = Integer.parseInt(binString.substring(2, 7), 2);
+			argument = Integer.parseInt(binString.substring(1, 7), 2);
 		} else {
 			command = 0;
 			argument = operation;
 		}
 		
 		//Interprets commands
-		//System.out.println("  Command: "+command+"\n  Argument: "+argument); //Debugging
+		System.out.println("  Command: "+command+"\n  Argument: "+argument); //Debugging
 		switch (command) {
 			case 0:
 				perform(argument);

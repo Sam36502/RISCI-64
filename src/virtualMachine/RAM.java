@@ -21,7 +21,9 @@ public class RAM {
 	}
 	
 	public void set(int addr, byte value) {
+		//System.out.println("Received command to store "+value+" into address "+addr+"...");
 		mem[addr] = value;
+		//this.debugValue();
 		if (addr >= 32) {
 			screenWritten = true;
 		}
@@ -35,6 +37,14 @@ public class RAM {
 				System.out.print((char) mem[y*8+x]);
 			}
 			System.out.println(" - "+y*8);
+		}
+	}
+	
+	//Prints all of RAM's values as integers
+	public void debugValue() {
+		System.out.println("Displaying memory as values:\n-----------------------------");
+		for (int i=0; i<64; i++) {
+			System.out.println(i+" - "+mem[i]);
 		}
 	}
 	

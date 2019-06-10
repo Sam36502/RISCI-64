@@ -56,8 +56,7 @@ These are all the addresses (each 0 in the block represents a byte of data):
 0x1B    0     [Standard Input]
 0x1C     0    [Standard Output]
 0x1D      0   [Standard Error]
-0x1E       0  [I dunno (general variable)]
-0x1F        0 [I dunno (general variable)]
+0x1E       00 [Unused system variables (Free space)]
 
 0x20 00000000 [8x8 Screen Output]
 0x28 00000000
@@ -91,6 +90,12 @@ Note that this will be read by I/O as an ASCII character when output.
 **Standard Error**
 This is where the system will write Runtime Errors and where the User
 can push their own error Messages.
+
+**Unused system variables**
+Quite self explanatory. These were extra planned features
+but they seemed unneccessary and too much extra effort so they 
+were removed. These can therefore be used just the same as the
+general variables.
 
 **8x8 Screen Output**
 This represents an 8x8 grid of 16-colour pixels based on the Apple Macintosh default 16-color palette.

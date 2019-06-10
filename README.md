@@ -2,7 +2,7 @@
 *A 2-Bit Virtual Machine*
 
 This is just a little Project I made to mess about with Theoretical CPU architecture.\
-**Disclaimer:** Read my code at your own risk. it's is\
+**Disclaimer:** Read my code at your own risk. it's\
 predominantly unorganized hobby code. If you find any\
 possible imporovements, feel free to let me know.
 

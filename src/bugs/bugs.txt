@@ -2,11 +2,12 @@ RISCI-64
 1.7.1 - Bugs
 -----------------------
 
-*****	Programs can only be run once in the console.
-***	When there are only two elements on the stack, the perform command only reads the first element.
+X	Programs can only be run once in the console.
+X	When there are only two elements on the stack, the perform command only reads the first element.
 X	Not a bug but the default clockspeed needs to be waay faster.
 X	Not a bug but, there should be a newline after a program is run from console.
-**	If no input is passed to a program expecting input, java throws exceptions.
-***	Can't write to the screen from a program.
-**	Screen opens even when not writing to the screen.
-**	Screen painter sometimes attempts to read outside the serialized vram string.
+X	If no input is passed to a program expecting input, java throws exceptions.
+X	Can't write to the screen from a program.
+X	Screen opens even when not writing to the screen.
+X	Screen painter sometimes attempts to read outside the serialized vram string.
+X	Java crashes and throws exeption when memory outside range is selected.

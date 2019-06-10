@@ -138,10 +138,12 @@ public class Shell {
 							value = Integer.parseInt(command[1]);
 						} catch (NumberFormatException e) {
 							System.out.println("Value out of range (0-255)");
+							break;
 						}
 						
 						if (addr > 63 || addr < 0) {
 							System.out.println("Address out of range (0-63)");
+							break;
 						}
 						ram.set(addr,(byte) value);
 					}
@@ -203,12 +205,13 @@ public class Shell {
 					} else {
 						int b = 0;
 						int a = 0;
-						if (stack.size() > 0) {
+						int stackSize = stack.size();
+						if (stackSize > 0) {
 							b = stack.pop();
 						} else {
 							System.out.println("Stack is empty.");
 						}
-						if (stack.size() > 1) {
+						if (stackSize > 1) {
 							a = stack.pop();
 						}
 						switch (command[1]) {
@@ -228,11 +231,11 @@ public class Shell {
 								stack.push( (byte)(a % b));
 								break;
 							case "increment":
-								if (stack.size() > 1) stack.push((byte) a);
+								if (stackSize > 1) stack.push((byte) a);
 								stack.push( (byte)(b + 1));
 								break;
 							case "decrement":
-								if (stack.size() > 1) stack.push((byte) a);
+								if (stackSize > 1) stack.push((byte) a);
 								stack.push( (byte)(b - 1));
 								break;
 						}

@@ -65,7 +65,7 @@ public class CPU {
 		}
 		
 		//Interprets commands
-		System.out.println("  Command: "+command+"\n  Argument: "+argument); //Debugging
+		//System.out.println("  Command: "+command+"\n  Argument: "+argument); //Debugging
 		switch (command) {
 			case 0:
 				perform(argument);
@@ -78,7 +78,11 @@ public class CPU {
 				break;
 			case 2:
 				if (argument == 27 || stdincount < stdin.length()) {
-					mem.set(27, (byte) stdin.charAt(stdincount));
+					try {
+						mem.set(27, (byte) stdin.charAt(stdincount));
+					} catch (StringIndexOutOfBoundsException e) {
+						mem.set(27, (byte) 0);
+					}
 				} else {
 					mem.set(27, (byte) 0);
 				}

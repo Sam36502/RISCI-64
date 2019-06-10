@@ -31,10 +31,15 @@ public class Screen extends Canvas {
 
 		// Serialize the V-RAM into a string
 		String buffer = "";
-		//System.out.println("Serializing V-RAM...");
 		for (int i=32; i<64; i++) {
-			String buf = Integer.toBinaryString(InputOutput.ram.get(i)+256).substring(1);
-			//System.out.println("0x"+Integer.toHexString(i)+" - "+buf);
+			int before = InputOutput.ram.get(i);
+			String buf;
+			if (before < 0) {
+				buf = Integer.toBinaryString(before);
+				buf = buf.substring(buf.length()-8);
+			} else {
+				buf = Integer.toBinaryString(before+256).substring(1);
+			}
 			buffer += buf;
 		}
 
@@ -57,15 +62,15 @@ public class Screen extends Canvas {
 					break;
 
 				case 2:
-					col = Color.ORANGE;
+					col = getRGB("ff6600");
 					break;
 
 				case 3:
-					col = Color.RED;
+					col = getRGB("dd0000");
 					break;
 
 				case 4:
-					col = Color.MAGENTA;
+					col = getRGB("ff0099");
 					break;
 
 				case 5:
@@ -77,11 +82,11 @@ public class Screen extends Canvas {
 					break;
 
 				case 7:
-					col = Color.CYAN;
+					col = getRGB("0099ff");
 					break;
 
 				case 8:
-					col = Color.GREEN;
+					col = getRGB("00aa00");
 					break;
 
 				case 9:

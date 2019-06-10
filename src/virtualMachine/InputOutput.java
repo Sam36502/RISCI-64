@@ -62,7 +62,10 @@ public class InputOutput {
 			if (tmp.length() > 8) {
 				tmp = tmp.substring(tmp.length()-8, tmp.length());
 			}
-			ram.set(i, (byte) Integer.parseInt(tmp, 2));
+			byte fin = (byte) Integer.parseInt(tmp, 2);
+			if (fin != 0) {
+				ram.set(i, fin);
+			}
 		}
 		
 		//Loading Program into Prog mem
@@ -186,6 +189,7 @@ public class InputOutput {
 							e.printStackTrace();
 						}
 					}
+					prog.jump(0);
 					System.out.println("");
 					
 					break;

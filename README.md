@@ -57,10 +57,14 @@ These are all the addresses (each 0 in the block represents a byte of data):
 0x1C     0    [Standard Output]
 0x1D      000 [Unused system variables (Free space)]
 
-0x20 00000000 [8x8 Screen Output]
-0x28 00000000
-0x30 00000000
-0x38 00000000
+0x20 0000     [8x8 Screen Output]
+0x24     0000
+0x28 0000
+0x2C     0000
+0x30 0000
+0x34     0000
+0x38 0000
+0x4C     0000
 ```
 Now to explain what all these Do:
 
